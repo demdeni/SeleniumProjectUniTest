@@ -31,7 +31,7 @@
             string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
             var sdf = Directory.GetDirectories(newPath);
             var sfdds = sdf[4].ToString() + "\\bin\\Debug";
-            //int i;
+            int i;
 
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
