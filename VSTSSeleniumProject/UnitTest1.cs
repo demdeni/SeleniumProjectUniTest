@@ -15,7 +15,7 @@
     public class ChucksClass1
     {
         private string baseURL = "https://syneron-candela.com/int";
-        public RemoteWebDriver driver;
+        public IWebDriver driver;
         private string browser;
         public TestContext TestContext { get; set; }
 
@@ -33,7 +33,7 @@
             var sfdds = sdf[4].ToString() + "\\bin\\Debug";
             //int i;
 
-            driver = new FirefoxDriver();
+            driver = new ChromeDriver(sfdds);
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
