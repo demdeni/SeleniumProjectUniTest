@@ -27,13 +27,13 @@
         public void TireSearch_Any()
         {
             
-            var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-            string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
-            var sdf = Directory.GetDirectories(newPath);
-            var sfdds = sdf[4].ToString() + "\\bin\\Debug";
-            int i;
+            //var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+            //string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
+            //var sdf = Directory.GetDirectories(newPath);
+            //var sfdds = sdf[4].ToString() + "\\bin\\Debug";
+            //int i;
 
-            driver = new ChromeDriver(sfdds);
+            driver = new ChromeDriver(@"C:\Users\denisd\source\repos\VSTSSeleniumProject\VSTSSeleniumProject\bin\Debug");
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
