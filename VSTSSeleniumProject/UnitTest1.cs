@@ -33,7 +33,7 @@
             //var sfdds = sdf[4].ToString() + "\\bin\\Debug";
             //int i;
 
-            driver = new ChromeDriver(@"C:\Users\denisd\source\repos\VSTSSeleniumProject\VSTSSeleniumProject\bin\Debug");
+            driver = new FirefoxDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
