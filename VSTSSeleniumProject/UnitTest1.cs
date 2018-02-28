@@ -22,7 +22,7 @@
         [TestMethod]
         [TestCategory("Selenium")]
         [Priority(1)]
-        [Owner("Firefox")]
+        [Owner("Chrome")]
 
         public void TireSearch_Any()
         {
@@ -33,7 +33,7 @@
             var sfdds = sdf[4].ToString() + "\\bin\\Release";
             int i;
 
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(sfdds);
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
