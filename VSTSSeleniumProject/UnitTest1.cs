@@ -30,7 +30,7 @@
             var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
             string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
             var sdf = Directory.GetDirectories(newPath);
-            var sfdds = sdf[4].ToString() + "\\bin\\Debug";
+            var sfdds = sdf[4].ToString() + "\\bin\\Release";
             int i;
 
             driver = new ChromeDriver();
