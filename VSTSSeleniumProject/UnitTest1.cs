@@ -50,27 +50,27 @@
 
 
 
-        [TestMethod]
-        [TestCategory("Selenium")]
-        [Priority(1)]
-        [Owner("Chrome")]
-        public void FirstTest()
-        {
-            driver = new ChromeDriver();
-            Assert.IsNotNull(driver);
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
-            driver.Navigate().GoToUrl(baseURL);
+        //[TestMethod]
+        //[TestCategory("Selenium")]
+        //[Priority(1)]
+        //[Owner("Chrome")]
+        //public void FirstTest()
+        //{
+        //    driver = new ChromeDriver();
+        //    Assert.IsNotNull(driver);
+        //    driver.Manage().Window.Maximize();
+        //    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+        //    driver.Navigate().GoToUrl(baseURL);
 
-            var element = driver.FindElement(By.ClassName("wlcm-title"));
-            Assert.IsTrue(element.Displayed);
+        //    var element = driver.FindElement(By.ClassName("wlcm-title"));
+        //    Assert.IsTrue(element.Displayed);
 
-            driver.FindElement(By.Id("cboxClose")).Click();
+        //    driver.FindElement(By.Id("cboxClose")).Click();
 
-            var logo = driver.FindElement(By.Id("logo"));
-            Assert.IsTrue(logo.Displayed);
+        //    var logo = driver.FindElement(By.Id("logo"));
+        //    Assert.IsTrue(logo.Displayed);
 
-        }
+        //}
 
         [TestCleanup()]
         public void MyTestCleanup()
