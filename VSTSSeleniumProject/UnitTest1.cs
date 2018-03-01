@@ -14,6 +14,7 @@
     [TestClass]
     public class ChucksClass1
     {
+
         private string baseURL = "https://syneron-candela.com/int";
         public RemoteWebDriver driver;
         private string browser;
@@ -26,6 +27,8 @@
 
         public void TireSearch_Any()
         {
+            
+            
 
             //var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
             //string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
@@ -33,7 +36,7 @@
             //var sfdds = sdf[4].ToString() + "\\bin\\Release";
 
 
-            driver = new FirefoxDriver();
+            driver = new ChromeDriver("C:\\Users\\denisd\\Downloads\\chrome");
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
