@@ -24,29 +24,28 @@
         [TestCategory("Selenium")]
         [Priority(1)]
         [Owner("Chrome")]
-
-        public void TireSearch_Any()
+        public void FirstTest()
         {
-
-
-
-            //var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-            //string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
-            //var sdf = Directory.GetDirectories(newPath);
-            //var sfdds = sdf[4].ToString() + "\\bin\\Release";
-
             driver = new ChromeDriver();
+            Assert.IsNotNull(driver);
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
-            //driver.FindElementById("search_link").Click();
-            //do other Selenium things here!
+
+            var element = driver.FindElement(By.ClassName("wlcm-title"));
+            Assert.IsTrue(element.Displayed);
+
+            driver.FindElement(By.Id("cboxClose")).Click();
+
+            var element1 = driver.FindElement(By.Id("logo"));
+            Assert.IsTrue(element1.Displayed);
+
         }
 
         [TestCleanup()]
         public void MyTestCleanup()
         {
-            //driver.Quit();
+            driver.Quit();
         }
 
         [TestInitialize()]
