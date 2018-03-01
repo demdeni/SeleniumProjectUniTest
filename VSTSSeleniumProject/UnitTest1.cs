@@ -17,7 +17,7 @@
 
         private string baseURL = "https://syneron-candela.com/int";
         public IWebDriver driver;
-        public RemoteWebDriver driver1;
+        public IWebDriver driver1;
         private string browser;
         public TestContext TestContext { get; set; }
 
