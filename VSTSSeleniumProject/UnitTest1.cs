@@ -27,10 +27,10 @@
         public void TireSearch_Any()
         {
 
-            var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
-            string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
-            var sdf = Directory.GetDirectories(newPath);
-            var sfdds = sdf[4].ToString() + "\\bin\\Release";
+            //var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
+            //string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
+            //var sdf = Directory.GetDirectories(newPath);
+            //var sfdds = sdf[4].ToString() + "\\bin\\Release";
 
 
             driver = new FirefoxDriver();
