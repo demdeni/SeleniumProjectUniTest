@@ -75,7 +75,7 @@
         [TestCleanup()]
         public void MyTestCleanup()
         {
-            //driver.Quit();
+            driver.Quit();
         }
 
         [TestInitialize()]
