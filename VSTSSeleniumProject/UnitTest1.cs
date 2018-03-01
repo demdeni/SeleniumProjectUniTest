@@ -35,7 +35,7 @@
             //var sdf = Directory.GetDirectories(newPath);
             //var sfdds = sdf[4].ToString() + "\\bin\\Release";
 
-            driver = new ChromeDriver("C:\\Users\\denisd\\Downloads\\chrome");
+            driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Navigate().GoToUrl(baseURL);
