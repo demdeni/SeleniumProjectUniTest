@@ -25,7 +25,7 @@
         [Priority(1)]
         [Owner("Chrome")]
 
-        public int TireSearch_Any()
+        public void TireSearch_Any()
         {
 
 
@@ -37,7 +37,7 @@
 
             var item = 20;
             var item1 = 30;
-            return item * item1;
+            var gjgjhg = item * item1;
             //driver = new ChromeDriver("C:\\Users\\denisd\\Downloads\\chrome");
             //driver.Manage().Window.Maximize();
             //driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
