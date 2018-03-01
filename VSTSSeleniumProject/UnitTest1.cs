@@ -25,21 +25,23 @@
         [Priority(1)]
         [Owner("Chrome")]
 
-        public void TireSearch_Any()
+        public int TireSearch_Any()
         {
-            
-            
+
+
 
             //var path = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()));
             //string newPath = Path.GetFullPath(Path.Combine(path, @"..\"));
             //var sdf = Directory.GetDirectories(newPath);
             //var sfdds = sdf[4].ToString() + "\\bin\\Release";
 
-
-            driver = new ChromeDriver("C:\\Users\\denisd\\Downloads\\chrome");
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
-            driver.Navigate().GoToUrl(baseURL);
+            var item = 20;
+            var item1 = 30;
+            return item * item1;
+            //driver = new ChromeDriver("C:\\Users\\denisd\\Downloads\\chrome");
+            //driver.Manage().Window.Maximize();
+            //driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+            //driver.Navigate().GoToUrl(baseURL);
             //driver.FindElementById("search_link").Click();
             //do other Selenium things here!
         }
