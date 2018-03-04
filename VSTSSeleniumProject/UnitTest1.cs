@@ -24,22 +24,32 @@
         [TestMethod]
         public void RunChromeDriverHeadless()
         {
-            ChromeOptions option = new ChromeOptions();
-            option.AddArgument("--headless");
-            driver = new ChromeDriver(option);
+            try
+            {
+                ChromeOptions option = new ChromeOptions();
+                option.AddArgument("--headless");
+                driver = new ChromeDriver(option);
 
-            driver.Navigate().GoToUrl(baseURL);
+                driver.Navigate().GoToUrl(baseURL);
 
-            var element = driver.FindElement(By.ClassName("wlcm-title"));
-            Assert.IsTrue(element.Displayed);
+                var element = driver.FindElement(By.ClassName("wlcm-title"));
+                Assert.IsTrue(element.Displayed);
 
-            driver.FindElement(By.Id("cboxClose")).Click();
+                driver.FindElement(By.Id("cboxClose")).Click();
 
-            var logo = driver.FindElement(By.Id("logo"));
-            Assert.IsTrue(logo.Displayed);
-            var element1 = driver.FindElement(By.ClassName("sgfgsfgs"));
-            Assert.IsNotNull(element1);
-            driver.Quit();
+                var logo = driver.FindElement(By.Id("logo"));
+                Assert.IsTrue(logo.Displayed);
+                var element1 = driver.FindElement(By.ClassName("sgfgsfgs"));
+                Assert.IsNotNull(element1);
+            }
+            catch (Exception)
+            {
+                driver.Quit();
+            }
+            finally
+            {
+                driver.Quit();
+            }
         }
 
         //[TestMethod]
