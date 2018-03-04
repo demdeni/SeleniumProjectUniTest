@@ -37,26 +37,28 @@
 
             var logo = driver.FindElement(By.Id("logo"));
             Assert.IsTrue(logo.Displayed);
+            var element1 = driver.FindElement(By.ClassName("sgfgsfgs"));
+            Assert.IsNotNull(element1);
             driver.Quit();
         }
 
-        [TestMethod]
-        [TestCategory("Selenium")]
-        [TestCategory("Headless")]
-        public void RunChromeDriverPhantomJS()
-        {
-            var driver = new PhantomJSDriver();
-            driver.Navigate().GoToUrl(baseURL);
+        //[TestMethod]
+        //[TestCategory("Selenium")]
+        //[TestCategory("Headless")]
+        //public void RunChromeDriverPhantomJS()
+        //{
+        //    var driver = new PhantomJSDriver();
+        //    driver.Navigate().GoToUrl(baseURL);
 
-            var element = driver.FindElement(By.ClassName("wlcm-title"));
-            Assert.IsTrue(element.Displayed);
+        //    var element = driver.FindElement(By.ClassName("wlcm-title"));
+        //    Assert.IsTrue(element.Displayed);
 
-            driver.FindElement(By.Id("cboxClose")).Click();
+        //    driver.FindElement(By.Id("cboxClose")).Click();
 
-            var logo = driver.FindElement(By.Id("logo"));
-            Assert.IsTrue(logo.Displayed);
-            driver.Quit();
-        }
+        //    var logo = driver.FindElement(By.Id("logo"));
+        //    Assert.IsTrue(logo.Displayed);
+        //    driver.Quit();
+        //}
 
         //[TestMethod]
         //[TestCategory("Selenium")]
