@@ -26,7 +26,7 @@
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArgument("--headless");
-            driver = new RemoteWebDriver(option);
+            driver = new ChromeDriver(option);
 
             driver.Navigate().GoToUrl(baseURL);
 
