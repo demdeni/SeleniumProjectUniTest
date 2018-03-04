@@ -43,7 +43,7 @@
         [TestMethod]
         [TestCategory("Selenium")]
         [TestCategory("Headless")]
-        public void BingSearch_Headless()
+        public void RunChromeDriverPhantomJS()
         {
             var driver = new PhantomJSDriver();
             driver.Navigate().GoToUrl(baseURL);
