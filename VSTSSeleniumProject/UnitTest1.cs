@@ -36,7 +36,7 @@
             driver.FindElement(By.Id("cboxClose")).Click();
 
             var logo = driver.FindElement(By.Id("logo"));
-            //Assert.IsTrue(logo.Displayed);
+            Assert.IsTrue(logo.Displayed);
         }
 
 
