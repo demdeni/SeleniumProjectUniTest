@@ -111,11 +111,11 @@
 
         //}
 
-        //[TestCleanup()]
-        //public void MyTestCleanup()
-        //{
-        //    driver.Quit();
-        //}
+        [TestCleanup()]
+        public void MyTestCleanup()
+        {
+            driver.Quit();
+        }
 
         [TestInitialize()]
         public void MyTestInitialize()
